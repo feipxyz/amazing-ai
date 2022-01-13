@@ -1,1 +1,1 @@
-# amazing-keypoints
+# amazing-ai

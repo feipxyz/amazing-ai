@@ -1,0 +1,19 @@
+MODEL:
+  META_ARCHITECTURE: "CoordDsntnnNet"
+  BACKBONE:
+    NAME: "build_resnet_backbone"
+  RESNETS:
+    OUT_FEATURES: ["res5"]
+  COORDDSNTNN:
+    COMPRESS_CHANNEL: 256
+    COMPRESS_FEATURE_NAME: "res5"
+    COORD_NUM: 8
+    UPSAMPLE_MODULE_NAME: "UpsamplePSF"
+  PIXEL_SHUFFLE:
+    DUCS: [[256, 512, 2], [128, 256, 2], [64, 128, 2]]
+VERSION: 2
+
+SOLVER:
+  # OPTIMIZER: "ADAM"
+  IMS_PER_BATCH: 32
+
